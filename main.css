@@ -1,0 +1,189 @@
+/* === Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* === Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+}
+.logo span {
+  color: #007aff;
+}
+
+nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+nav a:hover {
+  color: #007aff;
+}
+
+/* === Hero === */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #f8f9fa, #fff);
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  max-width: 800px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.cta-button {
+  background: #007aff;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: #005fcb;
+}
+
+/* === Sections === */
+.section {
+  padding: 6rem 10%;
+  text-align: center;
+}
+
+.section.alt {
+  background-color: #f6f8fa;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.column h3 {
+  margin-bottom: 0.8rem;
+  color: #007aff;
+}
+
+.steps {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  counter-reset: step;
+}
+
+.steps li {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 2.5rem;
+}
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #007aff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+/* === Contact Form === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto 0;
+}
+
+.contact-form input,
+.contact-form button {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #007aff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.contact-form button:hover {
+  background: #005fcb;
+}
+
+/* === Footer === */
+footer {
+  padding: 2rem 10%;
+  text-align: center;
+  color: #888;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    margin-left: 1rem;
+  }
+}
