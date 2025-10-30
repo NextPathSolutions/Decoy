@@ -74,13 +74,19 @@
         action="https://decoyai.app.n8n.cloud/webhook/2d7dfcb5-bf35-4a93-ab5a-c6eaeb469820" 
         method="POST"
       >
-        <input type="text" name="name" placeholder="Name" required />
-        
-        <input type="email" name="email" placeholder="E-Mail-Adresse" required />
-        
-        <input type="text" name="unternehmen" placeholder="Unternehmen" required />
+        <input type="text" name="firstname" placeholder="Wie lautet dein Vorname?" required />
 
-        <input type="text" name="position" placeholder="Position" required />
+        <input type="text" name="lastname" placeholder="Wie lautet dein Nachname?" required />
+
+        <input type="text" name="work" placeholder="Bei welchem Unternehmen arbeitest du?" required />
+
+        <input type="text" name="headquarter" placeholder="Wo ist der Hauptsitz deines Unternehmens?" required />
+
+        <input type="text" name="position" placeholder="In welcher Position arbeitest du?" required />
+
+        <input type="email" name="email" placeholder="Wie lautet deine E-Mail-Adresse?" required />
+        
+        <input type="text" name="phone" placeholder="Wie lautet deine Telefonnummer?" required />
         
         <button type="submit">Phishing-Simulation starten</button>
       </form>
